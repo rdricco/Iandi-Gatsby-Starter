@@ -1,9 +1,14 @@
 language: node
 
-install_requisites:
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+
+install:
  - yarn install
 
-build_step: yarn build
+script: yarn build
 
 deploy:
   provider: pages
@@ -12,4 +17,4 @@ deploy:
   keep-history: true
   verbose: true
   on:
-    branch: gh-pages
+    branch: develop
