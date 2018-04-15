@@ -1,7 +1,7 @@
 import React from "react";
-import { navigateTo } from "gatsby-link"
+import Link from "gatsby-link";
 import styled from "styled-components";
-import { Container, Flex, Box, Row, Link } from "rebass";
+import { Container, Flex, Box, Row } from "rebass";
 import HomeIcon from "react-icons/lib/io/android-home";
 import IosSearch from "react-icons/lib/io/ios-search";
 
@@ -16,11 +16,11 @@ const NavRight = styled(Link)`
 const LeftNav = () => {
 
     return <Flex ml="auto" mr="0" flexwrap="wrap">
-        <NavRight role="button"  onClick={() => navigateTo("/tags")}>
+        <NavRight role="button" to="/tags">
           all tags
         </NavRight>
 
-        <NavRight role="button" onClick={() => navigateTo("/about")}>
+        <NavRight role="button" to="/about">
           about
         </NavRight>
       </Flex>;

@@ -10,7 +10,6 @@ const NavigationContainer = Container.extend`
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.32);
   padding-top: 15px;
   padding-bottom: 15px;
-  opacity: 0.90;
   a,
   a:visited,
   a:active {
