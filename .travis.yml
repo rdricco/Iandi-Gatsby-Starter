@@ -9,12 +9,15 @@ install:
  - yarn install
 
 script: yarn build
+    "build:gh": "npm run clean && npm run build:pp && gh-pages -d public"
+
 
 deploy:
   provider: pages
-  skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  keep-history: true
   verbose: true
+  skip-cleanup: true
+  keep-history: true
+  local-dir: public
   on:
     branch: master
