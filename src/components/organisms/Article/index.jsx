@@ -18,9 +18,7 @@ class Article extends React.Component {
               </Row>
 
               <Row mx={0} mb={4} className="postDate">
-                <Link className="postUrl" to={this.props.slug}>
                   <Small>Posted on {this.props.date}</Small>
-                </Link>
               </Row>
 
               <Row mx={0} className="postContent">

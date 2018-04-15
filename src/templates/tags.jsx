@@ -27,7 +27,7 @@ const Tags = ({ pathContext, data }) => {
               const { slug, title } = node;
               return <Row key={slug} mx={0} pb={2}>
                   <Subhead>
-                    <Link to={`/${slug}/`}>{title}</Link>
+                    <Link to={slug}>{title}</Link>
                   </Subhead>
                 </Row>;
             })}
