@@ -1,0 +1,2 @@
+webpackJsonp([55702396619907],{681:function(e,a){e.exports={data:{site:{siteMetadata:{title:"Iandi Gatsby"}},allPosts:{group:[{fieldValue:"arrested-development"},{fieldValue:"dexter"},{fieldValue:"doctor-who"},{fieldValue:"futurama"},{fieldValue:"lorem-ipsum"},{fieldValue:"monty-python"},{fieldValue:"placeholder"},{fieldValue:"simpsons"},{fieldValue:"star-wars"}]}},pathContext:{}}}});
+//# sourceMappingURL=path---tags-32df7ea7fc57d3192215.js.map
