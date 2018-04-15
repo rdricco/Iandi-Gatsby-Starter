@@ -1,0 +1,42 @@
+image: node:latest
+
+cache:
+  paths:
+  - node_modules/
+
+stages:
+  - test
+  - deploy
+
+develop-test:
+  stage: test
+  script:
+  - yarn install
+  - yarn build
+  artifacts:
+    paths:
+    - public
+  environment:
+    name: development
+    url: https://dev.renatoricco.com
+
+  except:
+  - master
+  - develop
+
+
+pages:
+  stage: deploy
+  script:
+  - yarn install
+  - yarn build
+  artifacts:
+    paths:
+    - public
+  environment:
+    name: production
+    url: https://dev.renatoricco.com
+
+  only:
+  - master
+  - develop
