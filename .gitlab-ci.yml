@@ -18,7 +18,7 @@ develop-test:
     - public
   environment:
     name: development
-    url: https://dev.renatoricco.com
+    url: https://rdricco.gitlab.io/Iandi-Gatsby-Starter
 
   except:
   - master
@@ -35,7 +35,7 @@ pages:
     - public
   environment:
     name: production
-    url: https://dev.renatoricco.com
+    url: https://rdricco.gitlab.io/Iandi-Gatsby-Starter
 
   only:
   - master
