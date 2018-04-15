@@ -1,0 +1,18 @@
+language: node_js
+
+
+before_script:
+ - yarn install
+
+# Assume bundler is being used, therefore
+# the `install` step will run `bundle install` by default.
+script: yarn deploy
+
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: master
