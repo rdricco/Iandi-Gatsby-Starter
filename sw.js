@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/Iandi-Gatsby-Starter/app-34b06526365564c3f334.js","7a76972018c338f5ed8b62977c49420a"],["/Iandi-Gatsby-Starter/commons-dd6fb35e400c444ff2d1.js","5b99b4c3c65a52b4daa9b87b334636c7"],["/Iandi-Gatsby-Starter/index.html","31a9286ee31ff59d09c33f1ad383c301"],["/Iandi-Gatsby-Starter/manifest.json","b09b6e72e3cce45bcfb9621c3f4d1f4a"],["/Iandi-Gatsby-Starter/offline-plugin-app-shell-fallback/index.html","fd76e8bdf9d56c70b68f87f61c981841"]];
+var precacheConfig = [["/iandi-gatsby-starter/app-34b06526365564c3f334.js","92ae0903c7bf29d184c7007fa6e1d1d3"],["/iandi-gatsby-starter/commons-dd6fb35e400c444ff2d1.js","d8c57c93f721882c0c12c21d3aa8fcfa"],["/iandi-gatsby-starter/index.html","0f9f84ecb2f8d8e2d2e861b9b9c363ad"],["/iandi-gatsby-starter/manifest.json","b09b6e72e3cce45bcfb9621c3f4d1f4a"],["/iandi-gatsby-starter/offline-plugin-app-shell-fallback/index.html","b5bbec070089b3e9c2aa789dbc23eff4"]];
 var cacheName = 'sw-precache-v3-gatsby-plugin-offline-' + (self.registration ? self.registration.scope : '');
 
 
