@@ -1,9 +1,9 @@
 language: node
 
-before_script:
+install_requisites:
  - yarn install
 
-script: yarn build
+build_step: yarn build
 
 deploy:
   provider: pages
