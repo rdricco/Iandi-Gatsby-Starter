@@ -121,7 +121,7 @@ module.exports = {
       options: {
         name: "Iandi Starter",
         short_name: "Iandi Starter",
-        start_url: "/",
+        start_url: "/Iandi-Gatsby-Starter/",
         background_color: "#fff",
         theme_color: config.themeColor,
         display: "minimal-ui",
