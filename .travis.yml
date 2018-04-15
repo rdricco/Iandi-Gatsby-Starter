@@ -1,0 +1,20 @@
+language: node
+
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+
+install:
+ - yarn install
+
+script: yarn build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  verbose: true
+  on:
+    branch: gh-pages
