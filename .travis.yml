@@ -12,9 +12,10 @@ script: yarn build
 
 deploy:
   provider: pages
-  skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  keep-history: true
   verbose: true
+  skip-cleanup: true
+  keep-history: true
+  local-dir: public
   on:
     branch: master
