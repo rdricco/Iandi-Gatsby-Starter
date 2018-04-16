@@ -1,26 +1,27 @@
 # Iandi-Gatsby-Starter
 A GatsbyJS starter using Graphcms and Rebass
 
+You can see a demo here.
+
 
 ## Why?
 
-This project aims to provide a fast start for building GatsbyJS powered blogs.
+This project aims to provide a fast start when building GatsbyJS powered blogs that have all the PWA capabilities.
 
 
 ## Features
 
 * Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
-* Pre-configured to use GraphCMS as data source
+* Pre-configured to use GraphCMS API as data source
 * Styled using Rebass and Styled Components
 * Component structure following Atomic Design
 * JustComments support
 * Google Analytics support
 * Facebook Analytics support
 * Hotjar support
-* Instant Search powered by Algolia
+* Instant Search for posts powered by Algolia
 * NPM scripts for GitHub Pages deployment
-* Tags
-  * Separate page for posts under each tag
+* Tags: separate page for posts under each tag
 * SEO
   * Sitemap generation
   * robots.txt
