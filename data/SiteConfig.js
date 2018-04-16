@@ -3,8 +3,8 @@ module.exports = {
   siteTitleAlt: "Iandi Starter",
   siteTagline: "A GatsbyJS Starter kit using GraphCMS and Rebass.",
   siteLogo: "",
-  siteUrl: "https://rdricco.github.io",
-  pathPrefix: "/Iandi-Gatsby-Starter/",
+  siteUrl: "https://iandi-gatsby-starter.renatoricco.com",
+  pathPrefix: "/",
   siteDescription: "A GatsbyJS Starter kit using GraphCMS and Rebass.",
   siteRss: "/rss.xml",
   //
