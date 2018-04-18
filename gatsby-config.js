@@ -5,7 +5,7 @@ const config = require("./data/SiteConfig");
 const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
 /////// Query for Algolia Search
 const query = `{
-  allPosts
+  allPostsMarkdown
      (
       filter: { isPublished: { eq: true } }
     ) {
@@ -25,7 +25,7 @@ const query = `{
 const queries = [
   {
     query,
-    transformer: ({ data }) => data.allPosts.edges.map(({ node }) => node)
+    transformer: ({ data }) => data.allPostsMarkdown.edges.map(({ node }) => node)
   }
 ];
 ///
@@ -47,6 +47,39 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-emoji`,
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-widows`,
+          `gatsby-remark-responsive-iframe`,
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_self",
+              rel: "nofollow"
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 768
+            }
+          },
+        ]
+      }
+    },
+    // `gatsby-plugin-accessibilityjs`,
+    {
+      resolve: `gatsby-source-graphcms`,
+      options: {
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+        token: process.env.GRAPHCMS_TOKEN,
+        query: require("./data/configQuery")
+      }
+    },
     "gatsby-plugin-react-next",
     `gatsby-plugin-lodash`,
     {
@@ -56,16 +89,7 @@ module.exports = {
         viewBox: false
       }
     },
-    {
-      resolve: `gatsby-source-graphcms`,
-      options: {
-        endpoint: process.env.GRAPHCMS_ENDPOINT,
-        token: process.env.GRAPHCMS_TOKEN,
-        query: require("./data/configQuery")
-      }
-    },
     "gatsby-plugin-react-helmet",
-    // `gatsby-plugin-accessibilityjs`,
     "gatsby-plugin-catch-links",
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -153,7 +177,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allPosts } }) => {
-              return allPosts.edges.map(edge => {
+              return allPostsMarkdown.edges.map(edge => {
                 return Object.assign({}, edge.node, {
                   description: config.siteDescription,
                   url: site.siteMetadata.siteUrl + edge.node.slug,
@@ -163,7 +187,7 @@ module.exports = {
             },
             query: `
             {
-              allPosts(
+              allPostsMarkdown(
                 limit: 1000,
                 sort: { order: DESC, fields: [date] },
                 filter: { isPublished: { ne: false } }

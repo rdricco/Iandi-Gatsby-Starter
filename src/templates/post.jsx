@@ -13,7 +13,7 @@ import {
 export default class PostTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
-    const postNode = this.props.data.posts;
+    const postNode = this.props.data.postsMarkdown;
     const post = postNode;
     const author = post.author;
     const coverPost = post.coverImage.handle;
@@ -27,7 +27,7 @@ export default class PostTemplate extends React.Component {
           <Banner bg="grey" backgroundImage={`https://media.graphcms.com/resize=w:1900,h:646,fit:crop/quality=v:75/compress/${coverPost}`} />
 
           <Container pt={4}>
-            <Article slug={post.slug} title={post.title} date={post.date} tags={post.tags} html={post.html} 
+            <Article slug={post.slug} title={post.title} date={post.date} tags={post.tags} html={post.childMarkdownRemark.html} 
             badgeColor={rebassTheme.colors.secondaryLightest}
             badgeBgColor={rebassTheme.colors.purplegatsby}
              />
@@ -50,13 +50,16 @@ export default class PostTemplate extends React.Component {
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
          query BlogPostBySlug($slug: String!) {
-           posts(slug: { eq: $slug }) {
+           postsMarkdown(slug: { eq: $slug }) {
              id
              title
              date(formatString: "DD/MM/YYYY")
              tags
              category
              html
+             childMarkdownRemark {
+               html
+             }
              author {
                name
                id

@@ -1,4 +1,6 @@
 import React from "react";
+const _ = require("lodash");
+const slugify = require("lodash-addons");
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import styled from "styled-components";
@@ -13,7 +15,7 @@ const TagList = styled.ul`
 
 const Tags = ({ pathContext, data }) => {
   const { tag } = pathContext;
-  const { edges, totalCount } = data.allPosts;
+  const { edges, totalCount } = data.allPostsMarkdown;
 
   return <Box my={4}>
       <Container py={4}>

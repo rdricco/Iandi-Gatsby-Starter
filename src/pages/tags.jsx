@@ -65,7 +65,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allPosts(filter: { isPublished: { ne: false } }) {
+    allPostsMarkdown(filter: { isPublished: { ne: false } }) {
       group(field: tags) {
         fieldValue
       }

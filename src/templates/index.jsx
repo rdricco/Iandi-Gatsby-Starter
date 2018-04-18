@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+const _ = require("lodash");
+const slugify = require("lodash-addons");
 import config from "../../data/SiteConfig";
 import rebassTheme from "../components/_settings/rebassTheme";
 import Helmet from "react-helmet";
@@ -29,12 +31,7 @@ const BlogPage = ({ data, pathContext }) => {
         <SEO />
       </Helmet>
       <FadeIn>
-        <Banner 
-        heading={config.siteTitle} 
-        tagline={config.siteTagline} 
-        colorFont="#fff" 
-         bg={rebassTheme.colors.purplegatsby}
-         />
+        <Banner heading={config.siteTitle} tagline={config.siteTagline} colorFont="#fff" bg={rebassTheme.colors.purplegatsby} />
         <Container pt={4}>
           {group.map(({ node }) => (
             <Article
@@ -44,6 +41,7 @@ const BlogPage = ({ data, pathContext }) => {
               title={node.title}
               date={node.date}
               tags={node.tags}
+              excerpt={node.childMarkdownRemark.excerpt}
               badgeColor={rebassTheme.colors.secondaryLightest}
               badgeBgColor={rebassTheme.colors.purplegatsby}
               // html={node.html}
