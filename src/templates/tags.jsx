@@ -29,7 +29,7 @@ const Tags = ({ pathContext, data }) => {
               const { slug, title } = node;
               return <Row key={slug} mx={0} pb={2}>
                   <Subhead>
-                    <Link to={slug}>{title}</Link>
+                    <Link to={"/" + slug}>{title}</Link>
                   </Subhead>
                 </Row>;
             })}
@@ -65,7 +65,7 @@ export default Tags;
 
 export const pageQuery = graphql`
   query TagPage($tag: String) {
-    allPosts(
+    allPostsMarkdown(
       limit: 2000
       sort: { fields: [date], order: DESC }
       filter: { tags: { in: [$tag] } }

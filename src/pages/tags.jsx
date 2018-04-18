@@ -14,7 +14,7 @@ export const TagList = styled.ul`
 `;
 
 const TagsPage = ({
-  data: { allPosts: { group }, site: { siteMetadata: { title } } }
+  data: { allPostsMarkdown: { group }, site: { siteMetadata: { title } } }
 }) => (
   <Box py={4}>
     <Container pt={4}>
