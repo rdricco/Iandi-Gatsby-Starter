@@ -18,6 +18,9 @@ const query = `{
         html
         slug
         isPublished
+        childMarkdownRemark{
+          excerpt
+        }
       }
     }
   }

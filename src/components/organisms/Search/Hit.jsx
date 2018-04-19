@@ -23,7 +23,7 @@ const Hit = props => {
         /> */}
         <Row mx={0}>
           <Subhead>
-            <Link to={`/${_.kebabCase(hit.slug)}`} style={{ textDecoration: "none" }}>
+            <Link to={hit.slug} style={{ textDecoration: "none" }}>
               {hit.title}
             </Link>
           </Subhead>
