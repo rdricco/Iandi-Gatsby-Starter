@@ -1,0 +1,2 @@
+webpackJsonp([0x5b921fe6e030],{697:function(e,t){e.exports={data:{allPostsMarkdown:{totalCount:1,edges:[{node:{title:"Hey, Luke! May the Force be with you.",slug:"hey-luke-may-the-force-be-with-you.",tags:["star-wars","placeholder"]}}]}},pathContext:{tag:"star-wars"}}}});
+//# sourceMappingURL=path---tags-star-wars-2c35f1a9c496c93fb690.js.map

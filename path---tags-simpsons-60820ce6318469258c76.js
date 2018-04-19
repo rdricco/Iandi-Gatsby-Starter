@@ -1,0 +1,2 @@
+webpackJsonp([0xd1b13c23ee24],{696:function(o,t){o.exports={data:{allPostsMarkdown:{totalCount:1,edges:[{node:{title:"You don't like your job, you don't strike",slug:"you-dont-like-your-job-you-don't-strike",tags:["simpsons","placeholder"]}}]}},pathContext:{tag:"simpsons"}}}});
+//# sourceMappingURL=path---tags-simpsons-60820ce6318469258c76.js.map
