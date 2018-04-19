@@ -1,0 +1,77 @@
+﻿type Asset @model {
+  authorAvatar: [Author!]! @relation(name: "AssetAuthorAvatar")
+  createdAt: DateTime!
+  fileName: String!
+  handle: String! @isUnique
+  height: Float
+  id: ID! @isUnique
+  mimeType: String
+  postCoverImage: [Post!]! @relation(name: "AssetPostCoverImage")
+  size: Float
+  updatedAt: DateTime!
+  url: String! @isUnique
+  width: Float
+}
+
+type Author @model {
+  avatar: Asset @relation(name: "AssetAuthorAvatar")
+  biography: String
+  blogposts: [Post!]! @relation(name: "Author")
+  createdAt: DateTime!
+  facebookProfile: String
+  gitHubProfile: String
+  id: ID! @isUnique
+  instagramProfile: String
+  isPublished: Boolean! @defaultValue(value: false)
+  linkedInProfile: String
+  name: String
+  twitterProfile: String
+  updatedAt: DateTime!
+}
+
+enum Categorias {
+  Blog
+}
+
+type File @model {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
+
+enum Locales {
+  EN_US
+}
+
+type Post @model {
+  author: Author @relation(name: "Author")
+  category: String!
+  coverImage: Asset @relation(name: "AssetPostCoverImage")
+  createdAt: DateTime!
+  date: DateTime!
+  html: String!
+  id: ID! @isUnique
+  isPublished: Boolean! @defaultValue(value: false)
+  postTags: [Tags!]
+  slug: String @isUnique
+  tags: [String!]
+  title: String
+  updatedAt: DateTime!
+}
+
+enum Tags {
+  Link
+  Video
+  Bandcamp
+}
+
+type User @model {
+  createdAt: DateTime!
+  id: ID! @isUnique
+  updatedAt: DateTime!
+}
