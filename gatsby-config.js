@@ -67,7 +67,7 @@ module.exports = {
             options: {
               maxWidth: 768
             }
-          },
+          }
         ]
       }
     },
@@ -176,10 +176,10 @@ module.exports = {
       `,
         feeds: [
           {
-            serialize: ({ query: { site, allPosts } }) => {
+            serialize: ({ query: { site, allPostsMarkdown } }) => {
               return allPostsMarkdown.edges.map(edge => {
                 return Object.assign({}, edge.node, {
-                  description: config.siteDescription,
+                  description: edge.node.childMarkdownRemark.excerpt,
                   url: site.siteMetadata.siteUrl + edge.node.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.slug
                 });
@@ -197,6 +197,9 @@ module.exports = {
                     title
                     date
                     html
+                      childMarkdownRemark{
+                      excerpt
+                    }
                   }
                 }
               }
