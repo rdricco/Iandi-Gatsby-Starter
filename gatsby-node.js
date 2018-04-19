@@ -14,17 +14,17 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
   if (node.internal.type === `Posts`) {
     createNode({
       id: `md-${node.id}`,
+      parent: node.id,
+      children: [],
       internal: {
         type: `${node.internal.type}Markdown`,
         mediaType: `text/markdown`,
         content: node.html,
         contentDigest: node.internal.contentDigest
       },
-      parent: node.id,
-      children: [],
       html: node.html,
       title: node.title,
-      slug: node.slug,
+      slug: _.slugify(node.slug),
       category: node.category,
       tags: node.tags,
       date: node.date,
