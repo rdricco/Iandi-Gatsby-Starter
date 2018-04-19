@@ -1,0 +1,2 @@
+webpackJsonp([0x652ebecfaaea],{694:function(t,o){t.exports={data:{allPostsMarkdown:{totalCount:1,edges:[{node:{title:"I'm not a witch.",slug:"i'm-not-a-witch",tags:["monty-python","lorem-ipsum"]}}]}},pathContext:{tag:"monty-python"}}}});
+//# sourceMappingURL=path---tags-monty-python-5baa06ad6f6f05e14219.js.map

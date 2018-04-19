@@ -1,2 +1,0 @@
-webpackJsonp([0x897714128da3],{676:function(t,a){t.exports={data:{allPosts:{totalCount:1,edges:[{node:{title:"You can crush me but you can't crush my spirit!",slug:"you-can-crush-me-but-you-can't-crush-my-spirit",tags:["placeholder","futurama"]}}]}},pathContext:{tag:"futurama"}}}});
-//# sourceMappingURL=path---tags-futurama-3db1647016eab5e8b2a8.js.map
