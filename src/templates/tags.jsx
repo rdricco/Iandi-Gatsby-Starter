@@ -15,7 +15,6 @@ const TagList = styled.ul`
 
 const Tags = ({ pathContext, data }) => {
   const { tag } = pathContext;
-  const { edges, totalCount } = data.allPostsMarkdown;
 
   return <Box my={4}>
       <Container py={4}>
