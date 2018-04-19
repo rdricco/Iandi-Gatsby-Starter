@@ -10,7 +10,6 @@ const tagTemplate = path.resolve("src/templates/tags.jsx");
 
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNode } = boundActionCreators;
-  console.log(node.internal.type);
   // Posts here is the node you'd like to create markdown for use on remark plugins
   if (node.internal.type === `Posts`) {
     createNode({
