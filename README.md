@@ -55,3 +55,15 @@ rm -rf .git # So you can have your own changes stored in VCS.
 npm install # or yarn install
 npm run develop # or gatsby develop
 ```
+
+
+## TODO
+
+* [Bug] Fix SEO
+* Improve slug generation
+* Merge all theme variables
+
+
+## Contributing
+
+Feel free to make suggestions, if you know a way to improve the starter kit send me a PR.
