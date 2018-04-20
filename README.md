@@ -60,6 +60,7 @@ npm run develop # or gatsby develop
 ## TODO
 
 * [Bug] Fix SEO
+* Add push notification capabilities
 * Improve slug generation
 * Merge all theme variables
 
